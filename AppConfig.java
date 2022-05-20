@@ -20,13 +20,14 @@ public class AppConfig
     	factoryBean.setPersistenceUnitName("SpringDataJPADemo");
     	return factoryBean;
     }
-    
-    @Bean
+	
+	@Bean
     public JpaTransactionManager transactionManager(EntityManagerFactory emf) {
     	JpaTransactionManager tm = new JpaTransactionManager();
     	
     	tm.setEntityManagerFactory(emf);
     	return tm;
     }
+
 
 }
